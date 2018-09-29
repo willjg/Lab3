@@ -34,6 +34,7 @@ public class WebScraper {
         int count = 0;
         while (index != -1) {
             count++;
+            System.out.println(simpleText.substring(index - 5, index + 15));
             simpleText = simpleText.substring(index + 1);
             index = simpleText.indexOf(search);
         }
@@ -41,7 +42,7 @@ public class WebScraper {
     }
     public static void main (String[] arguments) {
         String text = urlToString("http://erdani.com/tdpl/hamlet.txt");
-        System.out.println(text);
-        System.out.println(numberOfOccurences(text, "prince"));
+        //System.out.println(text);
+        System.out.println(numberOfOccurences(text, "PRINCE"));
     }
 }
